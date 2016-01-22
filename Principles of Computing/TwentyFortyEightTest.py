@@ -63,16 +63,16 @@ def run_2048_move_test():
     """
     Checks if the grid has been redrawn correctly after a move command
     """
-    suite = TestSuite()
-    o_game_board = TwentyFortyEight(4, 4)
+    # suite = TestSuite()
+    o_game_board = TwentyFortyEight(4, 6)
     o_game_board.set_tile(0, 0, 2)
     o_game_board.set_tile(1, 0, 2)
     o_game_board.set_tile(1, 3, 2)
     o_game_board.set_tile(3, 3, 4)
     print o_game_board
-    o_game_board.move(1)
-    o_game_board.move(3)
-    o_game_board.move(1)
+    o_game_board.move(2)
+    # o_game_board.move(3)
+    # o_game_board.move(1)
     print o_game_board
     row1 = o_game_board.arr_grid[0].count(4)
     row2 = o_game_board.arr_grid[1].count(0)
@@ -96,7 +96,7 @@ def run_merge_test():
     suite.report_results()
 
 # Run the test
-run_merge_test()
+# run_merge_test()
 # run_2048_reset_test()
-run_2048_new_tile_test()
+# run_2048_new_tile_test()
 run_2048_move_test()
